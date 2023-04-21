@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,6 +9,24 @@ import { faSquareGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const NavBar = () => {
+    const [ActiveLink, setActiveLink] = useState('home');
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => {
+            if (Window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+            window.addEventListener('scroll', onScroll);
+            return () => window.removeEventListener('scroll', onScroll);
+        }
+    }, [])
+
+    const onUpdateActiveLink = (value) => {
+        setActiveLink(value);
+    }
 
     return (
         <Navbar className={scrolled ? 'scralled' : ''} expand="lg">
