@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
-import headerImg from "../assets/MaskgroupPhoto.png";
+import headerImg from "../assets/Intersectphoto.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import CV from '../assets/CV_Mariia_Kiriakulova.pdf';
