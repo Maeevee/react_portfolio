@@ -401,13 +401,119 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+/* Contacts */
+.contact {
+  padding: 60px 0 200px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact img {
+  width: 80%;
+}
+
+.contact h2 {
+	font-size: 45px;
+	font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.contact form input, .contact form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  margin: 0 0 8px 0;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact form input:focus, .contact form textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #121212;
+}
+
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+
+.contact form button {
+  font-weight: 700;
+  color: #fff;
+  background-color: #151515;
+  padding: 14px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.contact form button span {
+  z-index: 1;
+  position: relative;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 0;
+  background-color: #151515;
+  border-radius: 64px 64px 0 0;
+}
+
+.social-icon a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  fill: #d4bff2;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 30px 20px 30px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.social-icon a svg {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  z-index: 10;
+  transition: color 1s;
+}
+
+.social-icon a::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -55px;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(90.21deg, #8d7ea2 -5.91%, #6b22b9 111.58%);
+  transition: 0.5s;
+}
+
+.social-icon a:hover {
+  transform: translateY(-10px);
+  transition: 0.6s;
+}
+
+.social-icon a:hover::after {
+  top: 0;
+}
+
+.social-icon a:hover svg {
+  fill: #000;
 }
