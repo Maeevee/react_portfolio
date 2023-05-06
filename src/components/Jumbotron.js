@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import headerImg from "../assets/Intersectphoto.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -12,36 +10,41 @@ const Jumbotron = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const greating = "Hello, I am Maria";
+    const greeting = "Hello, I am Maria";
     const period = 2000;
 
-    useEffect(() => {
-        let ticker = setInterval(() => {
-        tick();
-        }, delta);
+    const tickerRef = useRef(null);
 
-        return () => { clearInterval(ticker) };
-        }, [text]
-    );
+    const tick = useCallback(() => {
+    const fullText = greeting;
+    const updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
 
-    const tick = () => {
-        let fullText = greating;
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+    setText(updatedText);
 
-        setText(updatedText);
+    if (isDeleting) {
+        setDelta((prevDelta) => prevDelta / 2);
+    }
 
-        if (isDeleting) {
-        setDelta(prevDelta => prevDelta / 2);
-        }
-
-        if (!isDeleting && updatedText === fullText) {
+    if (!isDeleting && updatedText === fullText) {
         setIsDeleting(true);
         setDelta(period);
-        } else if (isDeleting && updatedText === '') {
+    } else if (isDeleting && updatedText === '') {
         setIsDeleting(false);
         setDelta(500);
-        }
     }
+    }, [greeting, isDeleting, text]);
+
+    useEffect(() => {
+    tickerRef.current = setInterval(() => {
+        tick();
+    }, delta);
+
+    return () => clearInterval(tickerRef.current);
+    }, [delta, tick]);
+
+
 
     const downloadCV = async() => {
         const link = document.createElement('a');
