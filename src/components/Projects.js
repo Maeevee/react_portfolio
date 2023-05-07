@@ -17,7 +17,7 @@ const Projects = () => {
     const projects = [
         {
             title: "Personal Portfolio",
-            description: "HTML & CSS",
+            description: "HTML & CSS (Flexbox, Grid, Media Queries)",
             imgUrl: projImg1,
             demo: "https://maeevee.github.io/MyPortfolio/",
             code: "https://github.com/Maeevee/MyPortfolio.git",
@@ -108,15 +108,15 @@ const Projects = () => {
                             {
                             projects.map((project, index) => {
                                 return (
-                                    <Col key={index} size={12} sm={6} md={4}>
+                                    <Col key={index} size={12} sm={12} md={6} lg={4}>
                                         <div className="proj-imgbx">
                                             <img src={project.imgUrl} alt='Project Card'/>
                                             <div className="proj-txtx">
                                                 <h4>{project.title}</h4>
                                                 <span>{project.description}</span>
                                                 <div className="cardButons">
-                                                    <a href={project.demo} target='_blank' rel="noreferrer"><button className='button-29'>Demo</button></a> 
-                                                    <a href={project.code} target='_blank' rel="noreferrer"><button className='button-29'>Code</button></a>
+                                                    <a href={project.demo} target='_blank' rel="noreferrer"><button className='proj-button'>Demo</button></a> 
+                                                    <a href={project.code} target='_blank' rel="noreferrer"><button className='proj-button'>Code</button></a>
                                                 </div>
                                             </div>
                                         </div>

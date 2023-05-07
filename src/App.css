@@ -1,8 +1,10 @@
-/* Fonts */
+/* Fonts ---------------------------------------------------------------------------------------------------------------------------------*/
 
   @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
-/* Default CSS */
+
+
+/* Default CSS ---------------------------------------------------------------------------------------------------------------------------------*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,13 +39,15 @@ h1, h2, h3, h4, h5, h6 {
   line-height: normal;
 }
 
-/* NavBar */
+
+
+/* NavBar ---------------------------------------------------------------------------------------------------------------------------------*/
 nav.navbar {
   padding: 18px 0;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 9;
+  z-index: 10000;
   transition:  0.32s ease-in-out;
   height: 80px;
 }
@@ -67,6 +71,7 @@ letter-spacing: 0.8px;
 padding: 0 25px;
 font-size: 18px;
 opacity: 0.75 !important;
+transition: 0.3s ease-in-out;
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -127,7 +132,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
-/* Jumbotron */
+
+
+/* Jumbotron ---------------------------------------------------------------------------------------------------------------------------------*/
 .jumbotron {
   margin-top: 0;
   padding: 260px 0 100px 0;
@@ -175,11 +182,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #d4bff2;
+  background: linear-gradient(90.21deg, #6b22b9 -5.91%, #8d7ea2 111.58%);
   left: 0;
   top: 0;
   z-index: -2;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .jumbotron button:hover {
@@ -203,7 +210,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
-/* Skills */
+
+
+/* Skills ---------------------------------------------------------------------------------------------------------------------------------*/
 .skill {
   padding: 0 0 50px 0;
   position: relative;
@@ -252,7 +261,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0%;
 }
 
-/* Projects */
+
+
+/* Projects ---------------------------------------------------------------------------------------------------------------------------------*/
 .project {
   padding: 10px 0;
   position: relative;
@@ -283,6 +294,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-imgbx {
   position: relative;
+  border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
 }
@@ -292,6 +304,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   height: 100%;
   border-radius: 30px;
+  z-index: 1;
 }
 
 .proj-imgbx::before {
@@ -301,22 +314,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   width: 100%;
   height: 0;
-  transition: 0.4s ease-in-out;
+  top: 0;
+  left: 0;
   border-radius: 30px;
+  transition: 0.5s ease-in-out;
+  backface-visibility: hidden;
 }
 
 .proj-imgbx:hover::before {
   height: 100%;
-  border-radius: 30px;
 }
 
 .proj-imgbx button {
   margin: 20px 10px;
+  border-radius: 20px;
 }
 
-
-/* CSS */
-.button-29 {
+.proj-button {
   align-items: center;
   appearance: none;
   background-image: radial-gradient(100% 100% at 100% 0, #8d5ba2 0, #720ea0 100%);
@@ -348,16 +362,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 18px;
 }
 
-.button-29:focus {
+.proj-button:focus {
   box-shadow: #9e3ce0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #993ce0 0 -3px 0 inset;
 }
 
-.button-29:hover {
+.proj-button:hover {
   box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #a93ce0 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
-.button-29:active {
+.proj-button:active {
   box-shadow: #a13ce0 0 3px 7px inset;
   transform: translateY(2px);
 }
@@ -401,7 +415,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/* Contacts */
+
+
+/* Contacts ---------------------------------------------------------------------------------------------------------------------------------*/
 .contact {
   padding: 60px 0 200px 0;
 }
@@ -447,15 +463,48 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .contact form button {
+  align-items: center;
+  appearance: none;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(92, 58, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 60px;
+  width: 150px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
   font-weight: 700;
   color: #fff;
   background-color: #151515;
   padding: 14px 48px;
-  font-size: 18px;
   margin-top: 25px;
-  border-radius: 20px;
-  position: relative;
-  transition: 0.3s ease-in-out;
+}
+
+.contact form button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #a93ce0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.contact form button:active {
+  box-shadow: #a13ce0 0 3px 7px inset;
+  transform: translateY(2px);
 }
 
 .contact form button span {
@@ -463,7 +512,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 
-/* Footer */
+
+
+/* Footer ---------------------------------------------------------------------------------------------------------------------------------*/
 .footer {
   padding: 30px 0;
   background-color: #151515;
@@ -485,13 +536,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 50%;
   position: relative;
   overflow: hidden;
+  transition: 0.5s ease-in-out;
 }
 .social-icon a svg {
   width: 18px;
   height: 18px;
   position: relative;
   z-index: 10;
-  transition: color 1s;
+  transition: 0.5s ease-in-out;
 }
 
 .social-icon a::after {
@@ -502,12 +554,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   left: 0;
   position: absolute;
   background: linear-gradient(90.21deg, #8d7ea2 -5.91%, #6b22b9 111.58%);
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .social-icon a:hover {
   transform: translateY(-10px);
-  transition: 0.6s;
+  transition: 0.6s ease-in-out;
 }
 
 .social-icon a:hover::after {
@@ -516,4 +568,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .social-icon a:hover svg {
   fill: #000;
+}
+
+@media (max-width: 480px) {
+  nav.navbar {
+    height: 130px;
+  }
+
+  .social-icon a {
+    margin: 0 10px 20px 10px;
+  }
 }
