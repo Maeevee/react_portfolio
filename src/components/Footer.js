@@ -17,8 +17,8 @@ const Footer = () => {
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    ©2023 Maria K. All rights reserved
+                <Col className='footerText'>
+                    ©2023 Maria K | All rights reserved
                 </Col>
             </Row>
         </Container>
