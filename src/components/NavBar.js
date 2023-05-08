@@ -37,7 +37,7 @@ const NavBar = () => {
                     <Nav className="ms-auto">
                         <Nav.Link href="#skills" className={ActiveLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => {onUpdateActiveLink('skills')}}>Skills</Nav.Link>
                         <Nav.Link href="#projects" className={ActiveLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => {onUpdateActiveLink('projects')}}>Projects</Nav.Link>
-                        <Nav.Link href="#contacts" className={ActiveLink === 'contacts' ? 'active navbar-link' : 'navbar-link'} onClick={() => {onUpdateActiveLink('contacts')}}>Contacts</Nav.Link>
+                        <Nav.Link href="#contact" className={ActiveLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => {onUpdateActiveLink('contacts')}}>Contacts</Nav.Link>
                     </Nav>
                     
                 </Navbar.Collapse>
