@@ -462,7 +462,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 0.8;
 }
 
-.contact form button {
+.contact form .submitButton {
   align-items: center;
   appearance: none;
   border: 0;
@@ -497,20 +497,40 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 25px;
 }
 
-.contact form button:hover {
+.contact form .submitButton:hover {
   box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #a93ce0 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
-.contact form button:active {
+.contact form .submitButton:active {
   box-shadow: #a13ce0 0 3px 7px inset;
   transform: translateY(2px);
 }
 
-.contact form button span {
+.contact form .submitButton span {
   z-index: 1;
   position: relative;
 }
+
+.ToastContainerParent {
+  pointer-events: auto;
+}
+
+.toast-container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  bottom: 50%;
+}
+
+.toast-container button {
+  display: none;
+}
+
+.toast-body {
+  padding: 10px;
+}
+
+
 
 
 
