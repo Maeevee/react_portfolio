@@ -51,11 +51,11 @@ const Projects = () => {
             code: "https://github.com/Maeevee/Code-Quiz.git",
         },
         {
-        title: "Work Day Scheduler",
-        description: "jQuery & Moment.js",
-        imgUrl: projImg6,
-        demo: "https://maeevee.github.io/Work-Day-Scheduler-by-Kiriakulova/",
-        code: "https://github.com/Maeevee/Work-Day-Scheduler-by-Kiriakulova.git",
+            title: "Work Day Scheduler",
+            description: "jQuery & Moment.js",
+            imgUrl: projImg6,
+            demo: "https://maeevee.github.io/Work-Day-Scheduler-by-Kiriakulova/",
+            code: "https://github.com/Maeevee/Work-Day-Scheduler-by-Kiriakulova.git",
         },
         {
             title: "Munchy",
