@@ -5,7 +5,7 @@ import projImg2 from "../assets/Personal-Website.jpg";
 // import projImg3 from "../assets/Finance-Dashboard.jpg";
 import projImg4 from "../assets/Password-Generator.jpg";
 import projImg5 from "../assets/Code-Quiz.jpg";
-// import projImg6 from "../assets/Work-Day-Scheduler.jpg";
+import projImg6 from "../assets/Work-Day-Scheduler.jpg";
 import projImg7 from "../assets/Munchy.jpg";
 import projImg8 from "../assets/README-Generator.jpg";
 import projImg9 from "../assets/Team-Generator.jpg";
@@ -50,13 +50,13 @@ const Projects = () => {
             demo: "https://maeevee.github.io/Code-Quiz/",
             code: "https://github.com/Maeevee/Code-Quiz.git",
         },
-        // {
-        // title: "Work Day Scheduler",
-        // description: "jQuery & Moment.js",
-        // imgUrl: projImg6,
-        // demo: "https://maeevee.github.io/Work-Day-Scheduler-by-Kiriakulova/",
-        // code: "https://github.com/Maeevee/Work-Day-Scheduler-by-Kiriakulova.git",
-        // },
+        {
+        title: "Work Day Scheduler",
+        description: "jQuery & Moment.js",
+        imgUrl: projImg6,
+        demo: "https://maeevee.github.io/Work-Day-Scheduler-by-Kiriakulova/",
+        code: "https://github.com/Maeevee/Work-Day-Scheduler-by-Kiriakulova.git",
+        },
         {
             title: "Munchy",
             description: "HTML, CSS, Bootstrap, jQuery & Server APIs",
@@ -85,13 +85,6 @@ const Projects = () => {
             demo: "https://readstream.netlify.app/",
             code: "https://github.com/mateusuk/ReadStream.git",
         },
-        // {
-        // title: "Business Startup",
-        // description: "Design & Development",
-        // imgUrl: projImg1,
-        // demo: "",
-        // code: "",
-        // },
     ];
     
     return (
