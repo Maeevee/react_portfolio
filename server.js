@@ -29,7 +29,7 @@ if (error) {
 });
 
 app.get("/", (req, res) => {
-    res.send("Hello, world!");
+    res.sendFile(__dirname + '/index.html');
   });
   
 
