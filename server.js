@@ -28,6 +28,11 @@ if (error) {
 }
 });
 
+app.get("/", (req, res) => {
+    res.send("Hello, world!");
+  });
+  
+
 router.post("/contact", (req, res) => {
 const name = req.body.firstName;
 const email = req.body.email;
