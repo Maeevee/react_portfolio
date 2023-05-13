@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/Rectangle.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 const Contacts = () => {

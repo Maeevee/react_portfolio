@@ -10,7 +10,6 @@ import projImg7 from "../assets/Munchy.jpg";
 import projImg8 from "../assets/README-Generator.jpg";
 import projImg9 from "../assets/Team-Generator.jpg";
 import projImg10 from "../assets/ReadStream.jpg";
-import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 const Projects = () => {
