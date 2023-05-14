@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/Rectangle.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import TrackVisibility from 'react-on-screen';
+import { motion } from "framer-motion";
 
 const Contacts = () => {
 
@@ -66,22 +66,32 @@ const Contacts = () => {
         }
     };
 
+    const skillsSlideIn = (direction, type, delay, duration) => ({
+        hidden: {
+            x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
+            y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
+        },
+        show: {
+            x: 0,
+            y: 0,
+            transition: {
+                type,
+                delay,
+                duration,
+                ease: 'easeOut',
+            },
+        },
+    });
 
     return (
         <section className="contact" id="contact">
             <Container>
                 <Row className="align-items-center">
                     <Col size={12} md={6}>
-                        <TrackVisibility offset={50}>
-                        {({ isVisible }) =>
-                            <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
-                        }
-                        </TrackVisibility>
+                            <motion.img variants={skillsSlideIn('left', 'tween', 0, 0.8)} initial='hidden' whileInView='show' src={contactImg} alt="Contact Us"/>
                     </Col>
                     <Col size={12} md={6}>
-                        <TrackVisibility >
-                        {({ isVisible }) =>
-                            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                            <motion.div variants={skillsSlideIn('right', 'tween', 0, 0.8)} initial='hidden' whileInView='show'>
                             <h2>Contact me</h2>
                             <form onSubmit={handleSubmit}>
                             <Row>
@@ -115,10 +125,8 @@ const Contacts = () => {
                                         />
                                 </Col>
                             </Row>
-                            
                             </form>
-                        </div>}
-                        </TrackVisibility>
+                        </motion.div>
                     </Col>
                 </Row>
             </Container>
