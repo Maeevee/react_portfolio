@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import GradientSvg from './GradientSvg';
+import { motion } from "framer-motion";
 
 const Skills = () => {
 
@@ -30,7 +31,40 @@ const Skills = () => {
         draggable: true,
         infinite: true,
         swipeable: true,
-      };
+    };
+
+    const skillsSlideIn = (direction, type, delay, duration) => ({
+        hidden: {
+            x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
+            y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
+        },
+        show: {
+            x: 0,
+            y: 0,
+            transition: {
+                type,
+                delay,
+                duration,
+                ease: 'easeOut',
+            },
+        },
+    });
+
+    const skillsFadeIn = (delay) => ({
+        hidden: {
+        y: -50,
+        opacity: 0,
+        },
+        show: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            type: 'spring',
+            duration: 0.8,
+            delay,
+        },
+        },
+    });
 
     const skillsList = [
         {
@@ -73,7 +107,6 @@ const Skills = () => {
             pathD: "M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z",
             viewBox: "0 0 576 512"
         },
-
     ]
 
     return (
@@ -81,16 +114,18 @@ const Skills = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <div className="skill-bx zoomIn">
-                            <h2>Skills</h2>
-                            <Carousel responsive={responsive} {...infiniteCarousel} className="owl-carousel owl-theme skill-slider">
-                                {
-                                skillsList.map((svg, index) => {
-                                return (
-                                    <div key={index} className="item"><GradientSvg viewBox={svg.viewBox} pathD={svg.pathD} /></div>
-                                )})}
-                            </Carousel>
-                        </div>
+                        <motion.div variants={skillsSlideIn('right', 'tween', 0, 0.8)} initial='hidden' whileInView='show' className="skill-bx">
+                            <motion.h2 variants={skillsFadeIn(1)} initial='hidden' whileInView='show'>Skills</motion.h2>
+                            <motion.div variants={skillsFadeIn(1.2)} initial='hidden' whileInView='show'>
+                                <Carousel responsive={responsive} {...infiniteCarousel} className="owl-carousel owl-theme skill-slider">
+                                    {
+                                    skillsList.map((svg, index) => {
+                                    return (
+                                        <div key={index} className="item"><GradientSvg viewBox={svg.viewBox} pathD={svg.pathD} /></div>
+                                    )})}
+                                </Carousel>
+                            </motion.div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
