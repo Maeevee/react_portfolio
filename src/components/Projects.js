@@ -105,7 +105,7 @@ const Projects = () => {
         },
     });
 
-    const skillsFadeIn = (delay) => ({
+    const projectsCardsFadeIn = (delay) => ({
         hidden: {
         y: -50,
         opacity: 0,
@@ -127,14 +127,14 @@ const Projects = () => {
             <Row>
             <Col size={12} className='col'>
                 <div >
-                    <motion.h2 variants={skillsFadeIn(1)} initial='hidden' whileInView='show'>Projects</motion.h2>
+                    <motion.h2 variants={projectsCardsFadeIn(1)} initial='hidden' whileInView='show'>Projects</motion.h2>
                     <Container>
                         <Row>
                             {
                             projects.map((project, index) => {
                                 return (
                                     <Col key={index} size={12} sm={12} md={6} lg={4}>
-                                        <motion.div variants={skillsFadeIn(1.2)} initial='hidden' whileInView='show' className="proj-imgbx">
+                                        <motion.div variants={projectsCardsFadeIn(1.2)} initial='hidden' whileInView='show' className="proj-imgbx">
                                             <img src={project.imgUrl} alt='Project Card'/>
                                             <div className="proj-txtx">
                                                 <h4>{project.title}</h4>
