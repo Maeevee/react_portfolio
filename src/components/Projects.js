@@ -10,7 +10,7 @@ import projImg7 from "../assets/Munchy.jpg";
 import projImg8 from "../assets/README-Generator.jpg";
 import projImg9 from "../assets/Team-Generator.jpg";
 import projImg10 from "../assets/ReadStream.jpg";
-import TrackVisibility from 'react-on-screen';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
     const projects = [
@@ -85,23 +85,56 @@ const Projects = () => {
             code: "https://github.com/mateusuk/ReadStream.git",
         },
     ];
+
+    const projectsFadeIn = (direction, type, delay, duration) => ({
+        hidden: {
+        x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
+        y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
+        opacity: 0,
+        },
+        show: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+            type,
+            delay,
+            duration,
+            ease: 'easeOut',
+        },
+        },
+    });
+
+    const skillsFadeIn = (delay) => ({
+        hidden: {
+        y: -50,
+        opacity: 0,
+        },
+        show: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            type: 'spring',
+            duration: 0.8,
+            delay,
+        },
+        },
+    });
     
     return (
-        <section className="project" id="projects">
+        <motion.section variants={projectsFadeIn('up', 'tween', 0, 0.8)} initial='hidden' whileInView='show'  className="project" id="projects">
         <Container>
             <Row>
             <Col size={12} className='col'>
-                <TrackVisibility>
-                {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                    <h2>Projects</h2>
+                <div >
+                    <motion.h2 variants={skillsFadeIn(1)} initial='hidden' whileInView='show'>Projects</motion.h2>
                     <Container>
                         <Row>
                             {
                             projects.map((project, index) => {
                                 return (
                                     <Col key={index} size={12} sm={12} md={6} lg={4}>
-                                        <div className="proj-imgbx">
+                                        <motion.div variants={skillsFadeIn(1.2)} initial='hidden' whileInView='show' className="proj-imgbx">
                                             <img src={project.imgUrl} alt='Project Card'/>
                                             <div className="proj-txtx">
                                                 <h4>{project.title}</h4>
@@ -111,19 +144,18 @@ const Projects = () => {
                                                     <a href={project.code} target='_blank' rel="noreferrer"><button className='proj-button'>Code</button></a>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     </Col>
                                 )
                             })
                             }
                         </Row>
                     </Container>
-                </div>}
-                </TrackVisibility>
+                </div>
             </Col>
             </Row>
         </Container>
-        </section>
+        </motion.section>
     )
 }
 
