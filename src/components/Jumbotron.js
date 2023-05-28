@@ -78,9 +78,9 @@ const Jumbotron = () => {
             <Col xs={12} md={6} xl={7}>
                 <motion.div variants={aboutHero(1.1)} initial='hidden' whileInView='show'>
                     <h1><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Hello, I am Maria" ]'><span className="wrap">{text}</span></span></h1>
-                    <p>I'm an enthusiastic, motivated and detail-oriented Front-end Developer. I have a certain technical base and understanding of the main processes since I’ve studied biophysics and biochemistry at the university, I also consolidated all this knowledge and delved into Web Development at the Front-end Bootcamp.</p>
+                    <p>I'm an enthusiastic, motivated and detail-oriented Front-end Developer. I have a solid technical base and understanding of the main processes. I’ve studied biophysics and biochemistry at university. I consolidated this knowledge and delved into Web Development at the Front-end Bootcamp.</p>
                     <p>However, what sets me apart is my ability to approach web development from a scientific and analytical standpoint. I am able to break down complex problems into smaller components and devise solutions based on evidence and data.</p>  
-                    <p>Fast learner, hard worker and team player, passionate about building first-class websites.</p>
+                    <p>I am a fast learner, hard worker and team player, passionate about building first-class websites.</p>
                 </motion.div>    
                 <motion.div variants={aboutHero(1.4)} initial='hidden' whileInView='show'>
                     <button className='contact' onClick={downloadCV}>
