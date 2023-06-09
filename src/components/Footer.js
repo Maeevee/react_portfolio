@@ -45,7 +45,7 @@ const Footer = () => {
                         initial={{opacity: 0}}
                         whileInView={{opacity: 1}}
                         transition={{delay: 0.6}}>
-                            ©2023 Maria K | All rights reserved
+                            ©2023 Maria K | All rights reserved | mariya.kiryakulova@gmail.com
                         </motion.div>
                     </Col>
                 </Row>
