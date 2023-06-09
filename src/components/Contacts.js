@@ -94,7 +94,7 @@ const Contacts = () => {
                             <motion.div viewport={{ once: true }}  variants={contactsSlideIn('right', 'tween', 0, 0.8)} initial='hidden' whileInView='show'>
                             <h2>Contact me</h2>
                             <form onSubmit={handleSubmit}>
-                            <Row>
+                            <Row className="ToastContainerParent d-flex justify-content-center" >
                                 <Col size={12} sm={12} className="px-1">
                                 <input type="text" value={formDetails.Name} placeholder="Name" onChange={(e) => onFormUpdate('Name', e.target.value)} required/>
                                 </Col>
@@ -107,11 +107,12 @@ const Contacts = () => {
                                 <Col size={12} className="px-1">
                                 <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} required></textarea>
                                 <button className="submitButton" type="submit"><span>{buttonText}</span></button>
+                                
                                 </Col>
                             </Row>
                             <Row>
-                                <Col className="ToastContainerParent">
-                                        <ToastContainer toastClassName="toast-container" bodyClassName="toast-body"
+                                <Col className="ToastContainerParent d-flex justify-content-center" >
+                                        <ToastContainer ClassName="ml-4" toastClassName="toast-container" bodyClassName="toast-body"
                                             position="bottom-center"
                                             autoClose={3000}
                                             hideProgressBar={false}
