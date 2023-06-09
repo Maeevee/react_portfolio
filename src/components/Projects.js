@@ -18,6 +18,7 @@ const Projects = () => {
             title: "Personal Portfolio",
             description: "HTML & CSS (Flexbox, Grid, Media Queries)",
             imgUrl: projImg1,
+            summary: "This is a simple personal one-page portfolio",
             demo: "https://maeevee.github.io/MyPortfolio/",
             code: "https://github.com/Maeevee/MyPortfolio.git",
         },
@@ -25,6 +26,7 @@ const Projects = () => {
             title: "Personal Website",
             description: "Bootstrap",
             imgUrl: projImg2,
+            summary: "It's a personal portfolio. It was done with Bootstrap (navbar, jumbotron, cards, buttons and form components)",
             demo: "https://maeevee.github.io/Bootstrap-Portfolio-Kiriakulova/",
             code: "https://github.com/Maeevee/Bootstrap-Portfolio-Kiriakulova.git",
         },
@@ -32,12 +34,14 @@ const Projects = () => {
         //     title: "Finance Dashboard",
         //     description: "HTML,CSS & Javascript",
         //     imgUrl: projImg1,
+        //     summary: "",
         //     demo: "https://maeevee.github.io/Console-Finances/",
         //     code: "https://github.com/Maeevee/Console-Finances.git",
         //     },
         {
             title: "Password Generator",
             description: "Vanilla JavaScript",
+            summary: "This project is a JavaScript password generator that generates a random password based on user-selected criteria",
             imgUrl: projImg4,
             demo: "https://maeevee.github.io/Password-Generator/",
             code: "https://github.com/Maeevee/Password-Generator.git",
@@ -46,6 +50,7 @@ const Projects = () => {
             title: "Code Quiz",
             description: "JavaScript & Wed APIs",
             imgUrl: projImg5,
+            summary: "This application is a basic implementation of a quiz game. It uses the DOM to select and manipulate elements from the HTML file, and a function to display questions and answers",
             demo: "https://maeevee.github.io/Code-Quiz/",
             code: "https://github.com/Maeevee/Code-Quiz.git",
         },
@@ -53,6 +58,7 @@ const Projects = () => {
             title: "Work Day Scheduler",
             description: "jQuery & Moment.js",
             imgUrl: projImg6,
+            summary: "This is a JavaScript code for a daily planner application that allows users to plan their activities for the day",
             demo: "https://maeevee.github.io/Work-Day-Scheduler-by-Kiriakulova/",
             code: "https://github.com/Maeevee/Work-Day-Scheduler-by-Kiriakulova.git",
         },
@@ -60,6 +66,7 @@ const Projects = () => {
             title: "Munchy",
             description: "HTML, CSS, Bootstrap, jQuery & Server APIs",
             imgUrl: projImg7,
+            summary: "The group project entails creating a website that empowers users to effortlessly search and seamlessly explore an extensive collection of recipes",
             demo: "https://maeevee.github.io/Munchy/",
             code: "https://github.com/Maeevee/Munchy",
         },
@@ -67,6 +74,7 @@ const Projects = () => {
             title: "README Generator",
             description: "ES6 & Node.js",
             imgUrl: projImg8,
+            summary: "It's a command-line application that dynamically generates a professional README.md file from a user's input. Created with using Node.js and ES6 syntax",
             demo: "https://drive.google.com/file/d/1oggQQyKaFWSVfGlZJve232w4mqitewDK/view",
             code: "https://github.com/Maeevee/Professional-README-Generator-by-Kiriakulova.git",
         },
@@ -74,6 +82,7 @@ const Projects = () => {
             title: "Team Profile Generator",
             description: "JS, Node.js & Tests",
             imgUrl: projImg9,
+            summary: "It's an application that generates HTML files using input from a command-line interface",
             demo: "https://github.com/Maeevee/Team-Profile-Generator-by-Kiriakulova/blob/main/output/team.html",
             code: "https://github.com/Maeevee/Team-Profile-Generator-by-Kiriakulova.git",
         },
@@ -81,6 +90,7 @@ const Projects = () => {
             title: "ReadStream",
             description: "React.js",
             imgUrl: projImg10,
+            summary: "ReadStream is a user-friendly app that offers a wide range of books across different genres, making it easy for users to discover their next read.",
             demo: "https://readstream.netlify.app/",
             code: "https://github.com/mateusuk/ReadStream.git",
         },
@@ -138,11 +148,13 @@ const Projects = () => {
                                             <img src={project.imgUrl} alt='Project Card'/>
                                             <div className="proj-txtx">
                                                 <h4>{project.title}</h4>
-                                                <span>{project.description}</span>
+                                                <p>{project.description}</p>
+                                                <p>{project.summary}</p>
                                                 <div className="cardButons">
                                                     <a href={project.demo} target='_blank' rel="noreferrer"><button className='proj-button'>Demo</button></a> 
                                                     <a href={project.code} target='_blank' rel="noreferrer"><button className='proj-button'>Code</button></a>
                                                 </div>
+                                                
                                             </div>
                                         </motion.div>
                                     </Col>
