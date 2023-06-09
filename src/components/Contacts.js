@@ -88,10 +88,10 @@ const Contacts = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col size={12} md={6}>
-                            <motion.img variants={contactsSlideIn('left', 'tween', 0, 0.8)} initial='hidden' whileInView='show' src={contactImg} alt="Contact Us"/>
+                            <motion.img viewport={{ once: true }}  variants={contactsSlideIn('left', 'tween', 0, 0.8)} initial='hidden' whileInView='show' src={contactImg} alt="Contact Us"/>
                     </Col>
                     <Col size={12} md={6}>
-                            <motion.div variants={contactsSlideIn('right', 'tween', 0, 0.8)} initial='hidden' whileInView='show'>
+                            <motion.div viewport={{ once: true }}  variants={contactsSlideIn('right', 'tween', 0, 0.8)} initial='hidden' whileInView='show'>
                             <h2>Contact me</h2>
                             <form onSubmit={handleSubmit}>
                             <Row>

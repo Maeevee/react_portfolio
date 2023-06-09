@@ -22,12 +22,13 @@ const Footer = () => {
     });
 
     return (
-        <motion.div variants={footerFadeIn('up', 'tween', 0, 0.8)} initial='hidden' whileInView='show'>
+        <motion.div viewport={{ once: true }}  variants={footerFadeIn('up', 'tween', 0, 0.8)} initial='hidden' whileInView='show'>
             <Container className='footer'>
                 <Row>
                     <Col>
                         <span className="navbar-text">
-                            <motion.div className='social-icon'
+                            <motion.div  className='social-icon'
+                            viewport={{ once: true }} 
                             initial={{opacity: 0}}
                             whileInView={{opacity: 1}}
                             transition={{delay: 0.8}}>
@@ -42,6 +43,7 @@ const Footer = () => {
                 <Row>
                     <Col className='footerText'>
                         <motion.div
+                        viewport={{ once: true }} 
                         initial={{opacity: 0}}
                         whileInView={{opacity: 1}}
                         transition={{delay: 0.6}}>
