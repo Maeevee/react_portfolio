@@ -284,16 +284,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 40px;
 }
 
-/* .project p {
-  color: #B8B8B8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px auto 30px auto;
-  text-align: center;
-  width: 56%;
-} */
-
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
@@ -406,6 +396,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 0.8px;
+  padding: 5px;
 }
 
 .proj-txtx p:nth-child(3) {
@@ -527,7 +518,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .toast-container {
   font-family: Arial, sans-serif;
   font-size: 14px;
-  bottom: 50%;
   left: 15%;
 }
 

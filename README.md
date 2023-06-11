@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# React portfolio
+Welcome to my personal portfolio website! This platform serves as a comprehensive showcase of my resume, an introduction to who I am, and a gallery to display my various projects. Its primary purpose is to provide a centralized platform for me to share my projects and effectively highlight my skills and experiences. Feel free to explore and get to know me better through this website. 
+It is a one-page application that contains at the top a small section providing information about myself. In this section, you can also download my complete resume. Following that, there is a section displaying a list of my skills and another section showcasing my projects. The navigation bar allows you to easily navigate to any section on the page. Additionally, there is a contact form where you can leave me a message, and at the bottom of the page, you will find a footer with links to all my social media profiles and other contact methods:
+![](/src/assets/Portfolio.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies Used
+- Node.js
+- React.js
+- Bootstrap for React
+- Framer Motion library for anomation
 
-## Available Scripts
+## Local Setup
+To set up this project locally, follow these steps:
 
-In the project directory, you can run:
+1. Clone the repository: `git clone [repository-url]`
+2. Navigate to the project directory: `cd react_portfolio`
+3. Install dependencies: `npm install`
 
-### `npm start`
+## Running the Application
+To run the application locally, use the following command: `npm start`
+This will start the development server and open the application in your default browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Deployment
+My portfolio is deployed on Netlify. You can access it at the following URL: [https://maeevee-react-portfolio.netlify.app/](https://maeevee-react-portfolio.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Credits
+The design of this project was inspired by a tutorial on YouTube by [WebDecoded](https://www.youtube.com/@webdecoded). You can find the tutorial at the following [link](https://www.youtube.com/watch?v=hYv6BM2fWd8&list=PLd0qRSEDFQI7DgB5BKHQrryFlR02n1bK-).
 
-### `npm test`
+## License
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
