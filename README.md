@@ -1,6 +1,7 @@
 # React portfolio
 Welcome to my personal portfolio website! This platform serves as a comprehensive showcase of my resume, an introduction to who I am, and a gallery to display my various projects. Its primary purpose is to provide a centralized platform for me to share my projects and effectively highlight my skills and experiences. Feel free to explore and get to know me better through this website. 
 
+## Description
 It is a one-page application that contains at the top a small section providing information about myself. In this section, you can also download my complete resume. Following that, there is a section displaying a list of my skills and another section showcasing my projects. The navigation bar allows you to easily navigate to any section on the page. Additionally, there is a contact form where you can leave me a message, and at the bottom of the page, you will find a footer with links to all my social media profiles and other contact methods:
 ![](/src/assets/Portfolio.gif)
 
