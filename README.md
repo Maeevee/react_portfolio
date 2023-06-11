@@ -12,7 +12,7 @@ It is a one-page application that contains at the top a small section providing 
 ## Local Setup
 To set up this project locally, follow these steps:
 
-1. Clone the repository: `git clone [repository-url]`
+1. Clone the repository: `git clone https://github.com/Maeevee/react_portfolio.git`
 2. Navigate to the project directory: `cd react_portfolio`
 3. Install dependencies: `npm install`
 
