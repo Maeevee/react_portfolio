@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, } from "react-bootstrap";
 import projImg1 from "../assets/Personal-Portfolio.jpg";
 import projImg2 from "../assets/Personal-Website.jpg";
-// import projImg3 from "../assets/Finance-Dashboard.jpg";
+import projImg3 from "../assets/sushi-restaurant.jpg";
 import projImg4 from "../assets/Password-Generator.jpg";
 import projImg5 from "../assets/Code-Quiz.jpg";
 import projImg6 from "../assets/Work-Day-Scheduler.jpg";
@@ -30,20 +30,20 @@ const Projects = () => {
             demo: "https://maeevee.github.io/Bootstrap-Portfolio-Kiriakulova/",
             code: "https://github.com/Maeevee/Bootstrap-Portfolio-Kiriakulova.git",
         },
-        // {
-        //     title: "Finance Dashboard",
-        //     description: "HTML,CSS & Javascript",
-        //     imgUrl: projImg1,
-        //     summary: "",
-        //     demo: "https://maeevee.github.io/Console-Finances/",
-        //     code: "https://github.com/Maeevee/Console-Finances.git",
-        //     },
+        {
+            title: "Sushi Restaurant",
+            description: "Sass",
+            imgUrl: projImg3,
+            summary: "This is a website for a sushi restaurant. The CSS code has been refactored using the Sass preprocessor to enhance the code's readability, efficiency and make it more maintainable",
+            demo: "https://maeevee.github.io/Console-Finances/",
+            code: "https://github.com/Maeevee/sushi-restaurant.git",
+            },
         {
             title: "Password Generator",
             description: "Vanilla JavaScript",
             summary: "This project is a JavaScript password generator that generates a random password based on user-selected criteria",
             imgUrl: projImg4,
-            demo: "https://maeevee.github.io/Password-Generator/",
+            demo: "https://maeevee.github.io/sushi-restaurant/",
             code: "https://github.com/Maeevee/Password-Generator.git",
         },
         {
