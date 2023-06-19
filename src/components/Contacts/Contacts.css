@@ -1,0 +1,111 @@
+.contact {
+    padding: 60px 0 200px 0;
+}
+
+.contact img {
+    width: 80%;
+}
+
+.contact h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    color: #f1edf7;
+    margin: 0 0 8px 0;
+    padding: 18px 26px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact form input:focus, .contact form textarea:focus {
+    background: rgba(255, 255, 255, 1);
+    color: #121212;
+}
+
+.contact form input::placeholder, .contact form textarea::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: #f1edf7;
+}
+
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+    color: #121212;
+    opacity: 0.8;
+}
+
+.contact form .submitButton {
+    align-items: center;
+    appearance: none;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(92, 58, 111, 0.5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 60px;
+    width: 150px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f1edf7;
+    background-color: #151515;
+    padding: 14px 48px;
+    margin-top: 25px;
+}
+
+.contact form .submitButton:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #a93ce0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.contact form .submitButton:active {
+    box-shadow: #a13ce0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.contact form .submitButton span {
+    z-index: 1;
+    position: relative;
+}
+
+.ToastContainerParent {
+    pointer-events: auto;
+}
+
+.toast-container {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    left: 15%;
+}
+
+.toast-container button {
+    display: none;
+}
+
+.toast-body {
+    padding: 10px;
+}

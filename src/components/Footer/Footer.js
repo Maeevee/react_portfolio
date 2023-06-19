@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Footer.css';
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from 'framer-motion';
 

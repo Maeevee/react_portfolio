@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "./Contacts.css";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/Rectangle.png";
+import contactImg from "../../assets/Rectangle.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { motion } from "framer-motion";

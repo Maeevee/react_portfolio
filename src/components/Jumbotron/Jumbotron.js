@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import './Jumbotron.css';
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/Intersectphoto.png";
-import CV from '../assets/CV_Mariia_Kiriakulova.pdf';
+import headerImg from "../../assets/Intersectphoto.png";
+import CV from '../../assets/CV_Mariia_Kiriakulova.pdf';
 import { motion } from "framer-motion";
 
 

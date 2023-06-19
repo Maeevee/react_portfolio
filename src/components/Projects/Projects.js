@@ -1,15 +1,16 @@
 import React from 'react';
+import './Projects.css';
 import { Container, Row, Col, } from "react-bootstrap";
-import projImg1 from "../assets/Personal-Portfolio.jpg";
-import projImg2 from "../assets/Personal-Website.jpg";
-import projImg3 from "../assets/sushi-restaurant.jpg";
-import projImg4 from "../assets/Password-Generator.jpg";
-import projImg5 from "../assets/Code-Quiz.jpg";
-import projImg6 from "../assets/Work-Day-Scheduler.jpg";
-import projImg7 from "../assets/Munchy.jpg";
-import projImg8 from "../assets/README-Generator.jpg";
-import projImg9 from "../assets/Team-Generator.jpg";
-import projImg10 from "../assets/ReadStream.jpg";
+import projImg1 from "../../assets/Personal-Portfolio.jpg";
+import projImg2 from "../../assets/Personal-Website.jpg";
+import projImg3 from "../../assets/sushi-restaurant.jpg";
+import projImg4 from "../../assets/Password-Generator.jpg";
+import projImg5 from "../../assets/Code-Quiz.jpg";
+import projImg6 from "../../assets/Work-Day-Scheduler.jpg";
+import projImg7 from "../../assets/Munchy.jpg";
+import projImg8 from "../../assets/README-Generator.jpg";
+import projImg9 from "../../assets/Team-Generator.jpg";
+import projImg10 from "../../assets/ReadStream.jpg";
 import { motion } from 'framer-motion';
 
 const Projects = () => {

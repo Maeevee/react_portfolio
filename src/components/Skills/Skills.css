@@ -1,0 +1,47 @@
+.skill {
+    padding: 70px 0 50px 0;
+    position: relative;
+}
+
+.skill-bx {
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+}
+
+.skill h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.skill-slider {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.skill-slider .item svg {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px auto;
+    fill: #7d689c;
+}
+
+.background-image-left {
+    top: 28%;
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    z-index: -4;
+}
+
+.react-multi-carousel-list button.react-multiple-carousel__arrow--left {
+    left: 0%;
+}
+
+.react-multi-carousel-list button.react-multiple-carousel__arrow--right {
+    right: 0%;
+}

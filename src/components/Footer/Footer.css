@@ -1,0 +1,76 @@
+.footer {
+    padding: 15px 0;
+    background-color: #151515;
+    border-radius: 64px 64px 0 0;
+}
+
+.social-icon a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    fill: #d4bff2;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+    margin: 0 20px 10px 20px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+.social-icon a svg {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    z-index: 10;
+    transition: 0.5s ease-in-out;
+}
+
+.social-icon a::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -55px;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(90.21deg, #8d7ea2 -5.91%, #6b22b9 111.58%);
+    transition: 0.5s ease-in-out;
+}
+
+.social-icon a:hover {
+    transform: translateY(-10px);
+    transition: 0.6s ease-in-out;
+}
+
+.social-icon a:hover::after {
+    top: 0;
+}
+
+.social-icon a:hover svg {
+    fill: #000;
+}
+
+.footerText {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    nav.navbar {
+    height: 70px;
+    }
+
+    div.ms-auto.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    }
+
+    .toast-container {
+    left: 20%;
+    }
+}

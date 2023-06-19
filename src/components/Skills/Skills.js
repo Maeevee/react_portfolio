@@ -1,4 +1,5 @@
 import React from 'react';
+import './Skills.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import GradientSvg from './GradientSvg';
