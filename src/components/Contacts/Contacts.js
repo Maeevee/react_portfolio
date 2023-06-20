@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Contacts.css";
+import { SlideIn } from "../../utils/animation";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../../assets/Rectangle.png";
 import { ToastContainer, toast } from 'react-toastify';
@@ -67,32 +68,15 @@ const Contacts = () => {
         }
     };
 
-    const contactsSlideIn = (direction, type, delay, duration) => ({
-        hidden: {
-            x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
-            y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
-        },
-        show: {
-            x: 0,
-            y: 0,
-            transition: {
-                type,
-                delay,
-                duration,
-                ease: 'easeOut',
-            },
-        },
-    });
-
     return (
         <section className="contact" id="contact">
             <Container>
                 <Row className="align-items-center">
                     <Col size={12} md={6}>
-                            <motion.img viewport={{ once: true }}  variants={contactsSlideIn('left', 'tween', 0, 0.8)} initial='hidden' whileInView='show' src={contactImg} alt="Contact Us"/>
+                            <motion.img viewport={{ once: true }}  variants={SlideIn('left', 'tween', 0, 0.8)} initial='hidden' whileInView='show' src={contactImg} alt="Contact Us"/>
                     </Col>
                     <Col size={12} md={6}>
-                            <motion.div viewport={{ once: true }}  variants={contactsSlideIn('right', 'tween', 0, 0.8)} initial='hidden' whileInView='show'>
+                            <motion.div viewport={{ once: true }}  variants={SlideIn('right', 'tween', 0, 0.8)} initial='hidden' whileInView='show'>
                             <h2>Contact me</h2>
                             <form onSubmit={handleSubmit}>
                             <Row className="ToastContainerParent d-flex justify-content-center" >

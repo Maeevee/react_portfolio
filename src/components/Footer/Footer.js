@@ -1,29 +1,13 @@
 import React from 'react';
 import './Footer.css';
+import { FadeIn } from '../../utils/animation';
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from 'framer-motion';
 
 const Footer = () => {
 
-    const footerFadeIn = (direction, type, delay, duration) => ({
-        hidden: {
-        x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
-        y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
-        },
-        show: {
-        x: 0,
-        y: 0,
-        transition: {
-            type,
-            delay,
-            duration,
-            ease: 'easeOut',
-        },
-        },
-    });
-
     return (
-        <motion.div viewport={{ once: true }}  variants={footerFadeIn('up', 'tween', 0, 0.8)} initial='hidden' whileInView='show'>
+        <motion.div viewport={{ once: true }}  variants={FadeIn('up', 'tween', 0, 0.8)} initial='hidden' whileInView='show'>
             <Container className='footer'>
                 <Row>
                     <Col>

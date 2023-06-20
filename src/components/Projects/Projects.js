@@ -1,5 +1,6 @@
 import React from 'react';
 import './Projects.css';
+import { FadeIn, FadeIn2 } from '../../utils/animation';
 import { Container, Row, Col, } from "react-bootstrap";
 import projImg1 from "../../assets/Personal-Portfolio.jpg";
 import projImg2 from "../../assets/Personal-Website.jpg";
@@ -97,55 +98,20 @@ const Projects = () => {
         },
     ];
 
-    const projectsFadeIn = (direction, type, delay, duration) => ({
-        hidden: {
-        x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
-        y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
-        opacity: 0,
-        },
-        show: {
-        x: 0,
-        y: 0,
-        opacity: 1,
-        transition: {
-            type,
-            delay,
-            duration,
-            ease: 'easeOut',
-        },
-        },
-    });
-
-    const projectsCardsFadeIn = (delay) => ({
-        hidden: {
-        y: -50,
-        opacity: 0,
-        },
-        show: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            type: 'spring',
-            duration: 0.8,
-            delay,
-        },
-        },
-    });
-    
     return (
-        <motion.section viewport={{ once: true }}  variants={projectsFadeIn('up', 'tween', 0, 0.8)} initial='hidden' whileInView='show'  className="project" id="projects">
+        <motion.section viewport={{ once: true }}  variants={FadeIn('up', 'tween', 0, 0.8)} initial='hidden' whileInView='show'  className="project" id="projects">
         <Container>
             <Row>
             <Col size={12} className='col'>
                 <div >
-                    <motion.h2 viewport={{ once: true }}  variants={projectsCardsFadeIn(1)} initial='hidden' whileInView='show'>Projects</motion.h2>
+                    <motion.h2 viewport={{ once: true }}  variants={FadeIn2(1)} initial='hidden' whileInView='show'>Projects</motion.h2>
                     <Container>
                         <Row>
                             {
                             projects.map((project, index) => {
                                 return (
                                     <Col key={index} size={12} sm={12} md={6} lg={4}>
-                                        <motion.div viewport={{ once: true }}  variants={projectsCardsFadeIn(1.2)} initial='hidden' whileInView='show' className="proj-imgbx">
+                                        <motion.div viewport={{ once: true }}  variants={FadeIn2(1.2)} initial='hidden' whileInView='show' className="proj-imgbx">
                                             <img src={project.imgUrl} alt='Project Card'/>
                                             <div className="proj-txtx">
                                                 <h4>{project.title}</h4>

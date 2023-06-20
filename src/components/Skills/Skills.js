@@ -1,5 +1,6 @@
 import React from 'react';
 import './Skills.css';
+import { SlideIn, FadeIn2 } from '../../utils/animation';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import GradientSvg from './GradientSvg';
@@ -33,39 +34,6 @@ const Skills = () => {
         infinite: true,
         swipeable: true,
     };
-
-    const skillsSlideIn = (direction, type, delay, duration) => ({
-        hidden: {
-            x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
-            y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
-        },
-        show: {
-            x: 0,
-            y: 0,
-            transition: {
-                type,
-                delay,
-                duration,
-                ease: 'easeOut',
-            },
-        },
-    });
-
-    const skillsFadeIn = (delay) => ({
-        hidden: {
-        y: -50,
-        opacity: 0,
-        },
-        show: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            type: 'spring',
-            duration: 0.8,
-            delay,
-        },
-        },
-    });
 
     const skillsList = [
         {
@@ -123,9 +91,9 @@ const Skills = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <motion.div viewport={{ once: true }}  variants={skillsSlideIn('right', 'tween', 0, 0.8)} initial='hidden' whileInView='show' className="skill-bx">
-                            <motion.h2 viewport={{ once: true }}  variants={skillsFadeIn(1)} initial='hidden' whileInView='show'>Skills</motion.h2>
-                            <motion.div viewport={{ once: true }}  variants={skillsFadeIn(1.2)} initial='hidden' whileInView='show'>
+                        <motion.div viewport={{ once: true }}  variants={SlideIn('right', 'tween', 0, 0.8)} initial='hidden' whileInView='show' className="skill-bx">
+                            <motion.h2 viewport={{ once: true }}  variants={FadeIn2(1)} initial='hidden' whileInView='show'>Skills</motion.h2>
+                            <motion.div viewport={{ once: true }}  variants={FadeIn2(1.2)} initial='hidden' whileInView='show'>
                                 <Carousel responsive={responsive} {...infiniteCarousel} className="owl-carousel owl-theme skill-slider">
                                     {
                                     skillsList.map((svg, index) => {
