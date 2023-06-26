@@ -82,7 +82,7 @@ const Projects = () => {
         },
         {
             title: "Team Profile Generator",
-            description: "JS, Node.js & Tests",
+            description: "JS, Node.js & Jest",
             imgUrl: projImg9,
             summary: "It's an application that generates HTML files using input from a command-line interface",
             demo: "https://github.com/Maeevee/Team-Profile-Generator-by-Kiriakulova/blob/main/output/team.html",
