@@ -15,17 +15,18 @@
 }
 
 .jumbotron p {
-    color: #d4bff2;
+    color: #f1edf7;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     width: 96%;
+    margin-bottom: 10px;
 }
 
 .jumbotron button {
     font-weight: 700;
-    color: #d4bff2;
-    border: 1px solid #d4bff2;
+    color: #f1edf7;
+    border: 1px solid #dbc9f3;
     padding: 18px 34px;
     font-size: 18px;
     margin-right: 1.5rem;

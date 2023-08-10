@@ -22,7 +22,7 @@ nav.navbar  a.navbar-brand {
 
 nav.navbar .navbar-nav a.nav-link.navbar-link {
 font-weight: 400;
-color: #d4bff2;
+color: #f1edf7;
 letter-spacing: 0.8px;
 padding: 0 25px;
 font-size: 18px;
@@ -46,13 +46,13 @@ nav.navbar .navbar-toggler-icon {
     height: 17px;
     background-image: none;
     position: relative;
-    border-bottom: 2px solid #d4bff2;
+    border-bottom: 2px solid #f1edf7;
     transition: all 300ms linear;
     top: -2px;
 }
 
 nav.navbar .navbar-toggler-icon:focus {
-    border-bottom: 2px solid #d4bff2;
+    border-bottom: 2px solid #f1edf7;
 }
 
 nav.navbar .navbar-toggler-icon:after,
@@ -60,7 +60,7 @@ nav.navbar .navbar-toggler-icon:before {
     width: 24px;
     position: absolute;
     height: 2px;
-    background-color: #d4bff2;
+    background-color: #f1edf7;
     top: 0;
     left: 0;
     content: '';
@@ -74,13 +74,13 @@ nav.navbar .navbar-toggler-icon:after {
 
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
     transform: rotate(45deg);
-    background-color: #d4bff2;
+    background-color: #f1edf7;
     height: 2px;
 }
 
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
     transform: translateY(8px) rotate(-45deg);
-    background-color: #d4bff2;
+    background-color: #f1edf7;
     height: 2px;
 }
 
