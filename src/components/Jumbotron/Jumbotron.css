@@ -20,7 +20,7 @@
     letter-spacing: 0.8px;
     line-height: 1.5em;
     width: 96%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .jumbotron button {
@@ -55,6 +55,7 @@
 
 .jumbotron button:hover {
     color: #121212;
+    border: 1px solid #121212;
 }
 
 .jumbotron button:hover::before {
