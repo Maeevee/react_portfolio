@@ -12,6 +12,7 @@ import projImg7 from "../../assets/Munchy.jpg";
 import projImg8 from "../../assets/README-Generator.jpg";
 import projImg9 from "../../assets/Team-Generator.jpg";
 import projImg10 from "../../assets/ReadStream.jpg";
+import projImg11 from "../../assets/Cinematica.jpg"
 import { motion } from 'framer-motion';
 
 const Projects = () => {
@@ -92,9 +93,17 @@ const Projects = () => {
             title: "ReadStream",
             description: "React.js",
             imgUrl: projImg10,
-            summary: "ReadStream is a user-friendly app that offers a wide range of books across different genres, making it easy for users to discover their next read.",
+            summary: "ReadStream is a user-friendly app that offers a wide range of books across different genres, making it easy for users to discover their next read",
             demo: "https://readstream.netlify.app/",
             code: "https://github.com/mateusuk/ReadStream.git",
+        },
+        {
+            title: "Cinematica",
+            description: "React.js & Typescript",
+            imgUrl: projImg11,
+            summary: "It's an app that keeps you up to date with the latest cinema releases, allowing you to search for movies, get information about it, watch trailers, read reviews and add them to watchlist",
+            demo: "https://maevee-cinematica.netlify.app/home",
+            code: "https://github.com/Maeevee/Cinematica.git",
         },
     ];
 
