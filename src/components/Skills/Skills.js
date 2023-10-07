@@ -97,7 +97,7 @@ const Skills = () => {
                     <div className="col-12">
                         <motion.div viewport={{ once: true }}  variants={SlideIn('right', 'tween', 0, 0.8)} initial='hidden' whileInView='show' className="skill-bx">
                             <motion.h2 viewport={{ once: true }}  variants={FadeIn2(1)} initial='hidden' whileInView='show'>Skills</motion.h2>
-                            <motion.div viewport={{ once: true }}  variants={FadeIn2(1.2)} initial='hidden' whileInView='show'>
+                            <motion.div viewport={{ once: true }}  variants={FadeIn2(1)} initial='hidden' whileInView='show'>
                                 <Carousel responsive={responsive} {...infiniteCarousel} className="owl-carousel owl-theme skill-slider">
                                     {
                                     skillsList.map((svg, index) => {

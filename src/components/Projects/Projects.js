@@ -120,7 +120,7 @@ const Projects = () => {
                             projects.map((project, index) => {
                                 return (
                                     <Col key={index} size={12} sm={12} md={6} lg={4}>
-                                        <motion.div viewport={{ once: true }}  variants={FadeIn2(1.2)} initial='hidden' whileInView='show' className="proj-imgbx">
+                                        <motion.div viewport={{ once: true }}  variants={FadeIn2(1)} initial='hidden' whileInView='show' className="proj-imgbx">
                                             <img src={project.imgUrl} alt='Project Card'/>
                                             <div className="proj-txtx">
                                                 <h4>{project.title}</h4>
