@@ -3,7 +3,7 @@ import './Jumbotron.css';
 import { FadeIn2 } from '../../utils/animation';
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../../assets/Intersectphoto.png";
-import CV from '../../assets/CV_Mariia_Kiriakulova.pdf';
+import CV from '../../assets/Mariia_Kiriakulova_Resume.pdf';
 import { motion } from "framer-motion";
 
 const Jumbotron = () => {
